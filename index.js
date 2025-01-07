@@ -59,7 +59,9 @@ window.addEventListener("resize", () => {
 
 // Create Scene
 const scene = new THREE.Scene();
-const backgroundTexture = textureLoader.load("/img/scene/background.jpg");
+const backgroundTexture = textureLoader.load(
+  "https://cdn.prod.website-files.com/673abe3b1503d827f7ae6c52/677d1f68bd303a22adb0eba0_background.jpg"
+);
 
 // Create a large plane geometry
 const planeGeometry = new THREE.PlaneGeometry(15, 8); // Adjust size as needed
@@ -138,9 +140,15 @@ const fragmentShader = `
   }
 `;
 // Base Earth
-const dayTexture = textureLoader.load("/img/earth/world.jpg");
-const nightTexture = textureLoader.load("/img/earth/world_night.jpg");
-const bumpMap = textureLoader.load("/img/earth/world_bump.jpg");
+const dayTexture = textureLoader.load(
+  "https://cdn.prod.website-files.com/673abe3b1503d827f7ae6c52/677d22205a2dceb34423b0d6_world.jpg"
+);
+const nightTexture = textureLoader.load(
+  "https://cdn.prod.website-files.com/673abe3b1503d827f7ae6c52/677d221cbd303a22adb38817_world_night.jpg"
+);
+const bumpMap = textureLoader.load(
+  "https://cdn.prod.website-files.com/673abe3b1503d827f7ae6c52/677d221664ddf1be97a2a5d6_world_bump.jpg"
+);
 
 const earthGeometry = new THREE.SphereGeometry(1.7, 60, 60);
 
@@ -162,7 +170,9 @@ const material = new THREE.ShaderMaterial({
 const earth = new THREE.Mesh(earthGeometry, material);
 
 // Earth Clouds
-const cloudTexture = textureLoader.load("/img/earth/clouds.jpg"); // Your image with black and white parts
+const cloudTexture = textureLoader.load(
+  "https://cdn.prod.website-files.com/673abe3b1503d827f7ae6c52/677d21fc230c352c32994be9_clouds.jpg"
+); // Your image with black and white parts
 
 const cloudGeometry = new THREE.SphereGeometry(1.622, 60, 60);
 
@@ -337,7 +347,9 @@ let pos;
 let posY = 0;
 
 // Saturn
-const saturnTexture = textureLoader.load("/img/saturn/saturn.jpg");
+const saturnTexture = textureLoader.load(
+  "https://cdn.prod.website-files.com/673abe3b1503d827f7ae6c52/677d21d2bd303a22adb34bcd_saturn.jpg"
+);
 const saturnUniforms = {
   planetTexture: { value: saturnTexture },
   uShadowFactor: { value: 0.6 },
@@ -354,7 +366,7 @@ saturn.position.set(pos.x, posY, pos.z);
 
 // Saturn's rings
 const saturnRingTexture = textureLoader.load(
-  "./img/saturn/saturnringcolorflip.jpg"
+  "https://cdn.prod.website-files.com/673abe3b1503d827f7ae6c52/677d21a505787e2385cc9f0e_saturnringcolorflip.jpg"
 );
 const saturnRingUniform = {
   planetTexture: { value: saturnRingTexture },
@@ -383,7 +395,9 @@ saturnGroup.add(saturnRing);
 saturnGroup.name = 0;
 
 // Mercury
-const mercuryTexture = textureLoader.load("/img/mercury/mercury.jpg");
+const mercuryTexture = textureLoader.load(
+  "https://cdn.prod.website-files.com/673abe3b1503d827f7ae6c52/677d2180f04cde61dc1e272e_mercury.jpg"
+);
 const mercuryUniforms = {
   planetTexture: { value: mercuryTexture },
   uShadowFactor: { value: 0.5 },
@@ -402,7 +416,9 @@ mercuryGroup.add(mercury);
 mercuryGroup.name = 1;
 
 // Mars
-const marsTexture = textureLoader.load("/img/mars/mars.jpg");
+const marsTexture = textureLoader.load(
+  "https://cdn.prod.website-files.com/673abe3b1503d827f7ae6c52/677d215868f7310824427ea2_mars.jpg"
+);
 const marsUniforms = {
   planetTexture: { value: marsTexture },
   uShadowFactor: { value: 0.5 },
@@ -421,7 +437,9 @@ marsGroup.add(mars);
 marsGroup.name = 2;
 
 // Venus
-const venusTexture = textureLoader.load("/img/venus/venus.jpg");
+const venusTexture = textureLoader.load(
+  "https://cdn.prod.website-files.com/673abe3b1503d827f7ae6c52/677d206774d919ae98a61ae8_venus.jpg"
+);
 const venusUniforms = {
   planetTexture: { value: venusTexture },
   uShadowFactor: { value: 0.5 },
@@ -440,7 +458,9 @@ venusGroup.add(venus);
 venusGroup.name = 3;
 
 // Jupiter
-const jupiterTexture = textureLoader.load("/img/jupiter/jupiter.jpg");
+const jupiterTexture = textureLoader.load(
+  "https://cdn.prod.website-files.com/673abe3b1503d827f7ae6c52/677d2041b9d9021db7b9552a_jupiter.jpg"
+);
 const jupiterUniforms = {
   planetTexture: { value: jupiterTexture },
   uShadowFactor: { value: 0.5 },
@@ -459,7 +479,9 @@ jupiterGroup.add(jupiter);
 jupiterGroup.name = 4;
 
 // Pluto
-const plutoTexture = textureLoader.load("/img/pluto/pluto.jpg");
+const plutoTexture = textureLoader.load(
+  "https://cdn.prod.website-files.com/673abe3b1503d827f7ae6c52/677d2016e88d104feeb195d5_pluto.jpg"
+);
 const plutoUniforms = {
   planetTexture: { value: plutoTexture },
   uShadowFactor: { value: 0.5 },
@@ -478,7 +500,9 @@ plutoGroup.add(pluto);
 plutoGroup.name = 5;
 
 // Neptune
-const neptuneTexture = textureLoader.load("/img/neptune/neptune.jpg");
+const neptuneTexture = textureLoader.load(
+  "https://cdn.prod.website-files.com/673abe3b1503d827f7ae6c52/677d1fe9b9d9021db7b912d9_neptune.jpg"
+);
 const neptuneUniforms = {
   planetTexture: { value: neptuneTexture },
   uShadowFactor: { value: 0.5 },
@@ -497,7 +521,9 @@ neptuneGroup.add(neptune);
 neptuneGroup.name = 6;
 
 // Uranus
-const uranusTexture = textureLoader.load("/img/uranus/uranus.jpg");
+const uranusTexture = textureLoader.load(
+  "https://cdn.prod.website-files.com/673abe3b1503d827f7ae6c52/677d1fcdb1515ae7399a7bf1_uranus.jpg"
+);
 const uranusUniforms = {
   planetTexture: { value: uranusTexture },
   uShadowFactor: { value: 0.5 },
@@ -514,7 +540,7 @@ uranus.position.set(pos.x, posY, pos.z);
 
 // Uranus' rings
 const uranusRingTexture = textureLoader.load(
-  "/img/uranus/uranusringcolourflip.jpg"
+  "https://cdn.prod.website-files.com/673abe3b1503d827f7ae6c52/677d1fa9a6e4d8ca25888591_uranusringcolourflip.jpg"
 );
 const uranusRingUniform = {
   planetTexture: { value: uranusRingTexture },
@@ -611,151 +637,154 @@ const planetAddToGroup = new Map([
   ],
 ]);
 
-loader.load("./fonts/Poppins_Bold.json", (font) => {
-  let textArr;
-  let textGeometry;
-  let textObject;
-  const textMaterial = new THREE.MeshBasicMaterial({ color: 0xffffff });
-  let textMesh;
-  let angle = 0;
-  let textNameCount = 100;
+loader.load(
+  "https://cdn.jsdelivr.net/gh/cmshaki/fintura_script@main/Poppins_Bold.json",
+  (font) => {
+    let textArr;
+    let textGeometry;
+    let textObject;
+    const textMaterial = new THREE.MeshBasicMaterial({ color: 0xffffff });
+    let textMesh;
+    let angle = 0;
+    let textNameCount = 100;
 
-  const characterPositioning = (text, font, textObj, isEarth) => {
-    // Position the text around the sphere
-    const radius = 0.65; // Radius of the sphere
-    const textLength = text.length;
-    let totalWidth;
-    const widths = [];
+    const characterPositioning = (text, font, textObj, isEarth) => {
+      // Position the text around the sphere
+      const radius = 0.65; // Radius of the sphere
+      const textLength = text.length;
+      let totalWidth;
+      const widths = [];
 
-    // Calculate the starting angle for characters
-    let currentAngle;
-    if (!isEarth) {
-      currentAngle = (angle - 60) * (-Math.PI / 180);
-    } else {
-      currentAngle = 44 * (-Math.PI / 180);
-    }
-
-    // Get the total width of each character
-    for (let i = 0; i < textLength; i++) {
-      const char = text[i];
-      const charGeometry = new TextGeometry(char, {
-        font: font,
-        size: isEarth ? 0.5 : 0.1,
-        depth: 0,
-        curveSegments: 12,
-        bevelEnabled: false,
-      });
-      charGeometry.computeBoundingBox();
-      const width =
-        charGeometry.boundingBox.max.x - charGeometry.boundingBox.min.x;
-      widths.push(width);
-      totalWidth += width;
-    }
-
-    for (let i = 0; i < textLength; i++) {
-      const char = text[i];
-      const charGeometry = new TextGeometry(char, {
-        font: font,
-        size: isEarth ? 0.5 : 0.1,
-        depth: 0,
-        curveSegments: 12,
-        bevelEnabled: false,
-      });
-      const charMesh = new THREE.Mesh(charGeometry, textMaterial);
-
-      // Set the position based on the current angle
+      // Calculate the starting angle for characters
+      let currentAngle;
       if (!isEarth) {
-        charMesh.position.set(
-          radius * Math.sin(currentAngle),
+        currentAngle = (angle - 60) * (-Math.PI / 180);
+      } else {
+        currentAngle = 44 * (-Math.PI / 180);
+      }
+
+      // Get the total width of each character
+      for (let i = 0; i < textLength; i++) {
+        const char = text[i];
+        const charGeometry = new TextGeometry(char, {
+          font: font,
+          size: isEarth ? 0.5 : 0.1,
+          depth: 0,
+          curveSegments: 12,
+          bevelEnabled: false,
+        });
+        charGeometry.computeBoundingBox();
+        const width =
+          charGeometry.boundingBox.max.x - charGeometry.boundingBox.min.x;
+        widths.push(width);
+        totalWidth += width;
+      }
+
+      for (let i = 0; i < textLength; i++) {
+        const char = text[i];
+        const charGeometry = new TextGeometry(char, {
+          font: font,
+          size: isEarth ? 0.5 : 0.1,
+          depth: 0,
+          curveSegments: 12,
+          bevelEnabled: false,
+        });
+        const charMesh = new THREE.Mesh(charGeometry, textMaterial);
+
+        // Set the position based on the current angle
+        if (!isEarth) {
+          charMesh.position.set(
+            radius * Math.sin(currentAngle),
+            0,
+            radius * Math.cos(currentAngle)
+          );
+        } else {
+          charMesh.position.set(
+            1.9 * Math.sin(currentAngle),
+            0,
+            1.9 * Math.cos(currentAngle)
+          );
+        }
+
+        // Rotate the character to face outward
+        const outwardNormal = new THREE.Vector3(
+          Math.sin(currentAngle),
           0,
-          radius * Math.cos(currentAngle)
+          Math.cos(currentAngle)
         );
-      } else {
-        charMesh.position.set(
-          1.9 * Math.sin(currentAngle),
-          0,
-          1.9 * Math.cos(currentAngle)
-        );
+        if (!isEarth) {
+          charMesh.lookAt(outwardNormal);
+        } else {
+          charMesh.lookAt(camera.position);
+        }
+        textObj.add(charMesh);
+
+        // Update the current angle based on the width of the character
+        // scale different letters differently
+        const wRegex = /W|T/g;
+        const mpfRegex = /M|P|F|C|R|S/g;
+        const nurRegex = /n|u|r/g;
+        const ilRegex = /i|l/g;
+        const xyRegex = /x|y/g;
+        const nuRegex = /n|u/g;
+        const tRegex = /t/g;
+        if (!isEarth) {
+          currentAngle += wRegex.test(char)
+            ? widths[i] * 1.6
+            : mpfRegex.test(char)
+            ? widths[i] * 1.8
+            : xyRegex.test(char)
+            ? widths[i] * 1.6
+            : nurRegex.test(char)
+            ? widths[i] * 1.9
+            : ilRegex.test(char)
+            ? widths[i] * 2.5
+            : widths[i] * 1.75; // Increment the angle by the width of the character
+        } else {
+          currentAngle += ilRegex.test(char)
+            ? widths[i] * 0.9
+            : nuRegex.test(char)
+            ? widths[i] * 0.65
+            : tRegex.test(char)
+            ? widths[i] * 0.6
+            : widths[i] * 0.8;
+        }
       }
+    };
 
-      // Rotate the character to face outward
-      const outwardNormal = new THREE.Vector3(
-        Math.sin(currentAngle),
-        0,
-        Math.cos(currentAngle)
-      );
-      if (!isEarth) {
-        charMesh.lookAt(outwardNormal);
-      } else {
-        charMesh.lookAt(camera.position);
-      }
-      textObj.add(charMesh);
-
-      // Update the current angle based on the width of the character
-      // scale different letters differently
-      const wRegex = /W|T/g;
-      const mpfRegex = /M|P|F|C|R|S/g;
-      const nurRegex = /n|u|r/g;
-      const ilRegex = /i|l/g;
-      const xyRegex = /x|y/g;
-      const nuRegex = /n|u/g;
-      const tRegex = /t/g;
-      if (!isEarth) {
-        currentAngle += wRegex.test(char)
-          ? widths[i] * 1.6
-          : mpfRegex.test(char)
-          ? widths[i] * 1.8
-          : xyRegex.test(char)
-          ? widths[i] * 1.6
-          : nurRegex.test(char)
-          ? widths[i] * 1.9
-          : ilRegex.test(char)
-          ? widths[i] * 2.5
-          : widths[i] * 1.75; // Increment the angle by the width of the character
-      } else {
-        currentAngle += ilRegex.test(char)
-          ? widths[i] * 0.9
-          : nuRegex.test(char)
-          ? widths[i] * 0.65
-          : tRegex.test(char)
-          ? widths[i] * 0.6
-          : widths[i] * 0.8;
-      }
-    }
-  };
-
-  const createTextParentObject = (ind, len, isEarth) => {
-    textObject = new THREE.Object3D();
-    textObject.position.sub(earth.position);
-    textObject.name = textNameCount;
-    textNameCount += 1;
-    const currentY = len < 2 ? -0.05 : ind == 0 ? 0 : -0.17;
-    textObject.position.set(pos.x, !isEarth ? currentY : -0.25, pos.z);
-    // if (ind != 3 && ind != 2 && ind != 8) {
-    //   textObject.visible = false;
-    // }
-    return textObject;
-  };
-
-  for (let i = 0; i < 9; i++) {
-    textArr = planetNameMap.get(i);
-
-    if (i < 8) {
-      pos = angleDistCalc(7.0, angle);
-    } else {
-      pos = angleDistCalc(0, angle);
-    }
-    for (let n = 0; n < textArr.length; n++) {
-      const txtPar = createTextParentObject(n, textArr.length, i == 8);
-      characterPositioning(textArr[n], font, txtPar, i == 8);
-      // if (i == 8) {
-      //   console.log(txtPar.position);
+    const createTextParentObject = (ind, len, isEarth) => {
+      textObject = new THREE.Object3D();
+      textObject.position.sub(earth.position);
+      textObject.name = textNameCount;
+      textNameCount += 1;
+      const currentY = len < 2 ? -0.05 : ind == 0 ? 0 : -0.17;
+      textObject.position.set(pos.x, !isEarth ? currentY : -0.25, pos.z);
+      // if (ind != 3 && ind != 2 && ind != 8) {
+      //   textObject.visible = false;
       // }
-      planetAddToGroup.get(i)(txtPar);
+      return textObject;
+    };
+
+    for (let i = 0; i < 9; i++) {
+      textArr = planetNameMap.get(i);
+
+      if (i < 8) {
+        pos = angleDistCalc(7.0, angle);
+      } else {
+        pos = angleDistCalc(0, angle);
+      }
+      for (let n = 0; n < textArr.length; n++) {
+        const txtPar = createTextParentObject(n, textArr.length, i == 8);
+        characterPositioning(textArr[n], font, txtPar, i == 8);
+        // if (i == 8) {
+        //   console.log(txtPar.position);
+        // }
+        planetAddToGroup.get(i)(txtPar);
+      }
+      angle += 45;
     }
-    angle += 45;
   }
-});
+);
 
 // Add all Groups
 scene.add(earthGroup);
