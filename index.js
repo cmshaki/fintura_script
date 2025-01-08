@@ -58,9 +58,10 @@ window.addEventListener("resize", () => {
 });
 
 // Create Scene
+
 const scene = new THREE.Scene();
 const backgroundTexture = textureLoader.load(
-  "https://cdn.prod.website-files.com/673abe3b1503d827f7ae6c52/677d1f68bd303a22adb0eba0_background.jpg"
+  "https://cdn.prod.website-files.com/67374fea14bfa252915cbf90/676e91011bfdabb4ab20b444_background.jpg"
 );
 
 // Create a large plane geometry
@@ -141,13 +142,13 @@ const fragmentShader = `
 `;
 // Base Earth
 const dayTexture = textureLoader.load(
-  "https://cdn.prod.website-files.com/673abe3b1503d827f7ae6c52/677d22205a2dceb34423b0d6_world.jpg"
+  "https://cdn.prod.website-files.com/67374fea14bfa252915cbf90/676e9116476a50b801b68f31_world.jpg"
 );
 const nightTexture = textureLoader.load(
-  "https://cdn.prod.website-files.com/673abe3b1503d827f7ae6c52/677d221cbd303a22adb38817_world_night.jpg"
+  "https://cdn.prod.website-files.com/67374fea14bfa252915cbf90/676e91161d135329bd634d0b_world_night.jpg"
 );
 const bumpMap = textureLoader.load(
-  "https://cdn.prod.website-files.com/673abe3b1503d827f7ae6c52/677d221664ddf1be97a2a5d6_world_bump.jpg"
+  "https://cdn.prod.website-files.com/67374fea14bfa252915cbf90/676e91160817591f48797dd5_world_bump.jpg"
 );
 
 const earthGeometry = new THREE.SphereGeometry(1.7, 60, 60);
@@ -171,7 +172,7 @@ const earth = new THREE.Mesh(earthGeometry, material);
 
 // Earth Clouds
 const cloudTexture = textureLoader.load(
-  "https://cdn.prod.website-files.com/673abe3b1503d827f7ae6c52/677d21fc230c352c32994be9_clouds.jpg"
+  "https://cdn.prod.website-files.com/67374fea14bfa252915cbf90/676e91166ceaac4d443ea545_clouds.jpg"
 ); // Your image with black and white parts
 
 const cloudGeometry = new THREE.SphereGeometry(1.622, 60, 60);
@@ -348,7 +349,7 @@ let posY = 0;
 
 // Saturn
 const saturnTexture = textureLoader.load(
-  "https://cdn.prod.website-files.com/673abe3b1503d827f7ae6c52/677d21d2bd303a22adb34bcd_saturn.jpg"
+  "https://cdn.prod.website-files.com/67374fea14bfa252915cbf90/676e90f93504a9cc78a888bf_saturn.jpg"
 );
 const saturnUniforms = {
   planetTexture: { value: saturnTexture },
@@ -366,7 +367,7 @@ saturn.position.set(pos.x, posY, pos.z);
 
 // Saturn's rings
 const saturnRingTexture = textureLoader.load(
-  "https://cdn.prod.website-files.com/673abe3b1503d827f7ae6c52/677d21a505787e2385cc9f0e_saturnringcolorflip.jpg"
+  "./img/saturn/saturnringcolorflip.jpg"
 );
 const saturnRingUniform = {
   planetTexture: { value: saturnRingTexture },
@@ -396,7 +397,7 @@ saturnGroup.name = 0;
 
 // Mercury
 const mercuryTexture = textureLoader.load(
-  "https://cdn.prod.website-files.com/673abe3b1503d827f7ae6c52/677d2180f04cde61dc1e272e_mercury.jpg"
+  "https://cdn.prod.website-files.com/67374fea14bfa252915cbf90/676e90d00c619bcf88d6d26e_mercury.jpg"
 );
 const mercuryUniforms = {
   planetTexture: { value: mercuryTexture },
@@ -417,7 +418,7 @@ mercuryGroup.name = 1;
 
 // Mars
 const marsTexture = textureLoader.load(
-  "https://cdn.prod.website-files.com/673abe3b1503d827f7ae6c52/677d215868f7310824427ea2_mars.jpg"
+  "https://cdn.prod.website-files.com/67374fea14bfa252915cbf90/676e8ec4ed0cd31feb995291_mars.jpg"
 );
 const marsUniforms = {
   planetTexture: { value: marsTexture },
@@ -438,7 +439,7 @@ marsGroup.name = 2;
 
 // Venus
 const venusTexture = textureLoader.load(
-  "https://cdn.prod.website-files.com/673abe3b1503d827f7ae6c52/677d206774d919ae98a61ae8_venus.jpg"
+  "https://cdn.prod.website-files.com/67374fea14bfa252915cbf90/676e9108809fecee0d730dcd_venus.jpg"
 );
 const venusUniforms = {
   planetTexture: { value: venusTexture },
@@ -459,7 +460,7 @@ venusGroup.name = 3;
 
 // Jupiter
 const jupiterTexture = textureLoader.load(
-  "https://cdn.prod.website-files.com/673abe3b1503d827f7ae6c52/677d2041b9d9021db7b9552a_jupiter.jpg"
+  "https://cdn.prod.website-files.com/67374fea14bfa252915cbf90/676e8ebab954c7f29956532e_jupiter.jpg"
 );
 const jupiterUniforms = {
   planetTexture: { value: jupiterTexture },
@@ -480,7 +481,7 @@ jupiterGroup.name = 4;
 
 // Pluto
 const plutoTexture = textureLoader.load(
-  "https://cdn.prod.website-files.com/673abe3b1503d827f7ae6c52/677d2016e88d104feeb195d5_pluto.jpg"
+  "https://cdn.prod.website-files.com/67374fea14bfa252915cbf90/676e90dcdf366a17df8e5b6a_pluto.jpg"
 );
 const plutoUniforms = {
   planetTexture: { value: plutoTexture },
@@ -501,7 +502,7 @@ plutoGroup.name = 5;
 
 // Neptune
 const neptuneTexture = textureLoader.load(
-  "https://cdn.prod.website-files.com/673abe3b1503d827f7ae6c52/677d1fe9b9d9021db7b912d9_neptune.jpg"
+  "https://cdn.prod.website-files.com/67374fea14bfa252915cbf90/676e90d6a3814d746da85c73_neptune.jpg"
 );
 const neptuneUniforms = {
   planetTexture: { value: neptuneTexture },
@@ -522,7 +523,7 @@ neptuneGroup.name = 6;
 
 // Uranus
 const uranusTexture = textureLoader.load(
-  "https://cdn.prod.website-files.com/673abe3b1503d827f7ae6c52/677d1fcdb1515ae7399a7bf1_uranus.jpg"
+  "https://cdn.prod.website-files.com/67374fea14bfa252915cbf90/676e910e7b188175ad6b1afe_uranus.jpg"
 );
 const uranusUniforms = {
   planetTexture: { value: uranusTexture },
@@ -540,7 +541,7 @@ uranus.position.set(pos.x, posY, pos.z);
 
 // Uranus' rings
 const uranusRingTexture = textureLoader.load(
-  "https://cdn.prod.website-files.com/673abe3b1503d827f7ae6c52/677d1fa9a6e4d8ca25888591_uranusringcolourflip.jpg"
+  "/img/uranus/uranusringcolourflip.jpg"
 );
 const uranusRingUniform = {
   planetTexture: { value: uranusRingTexture },
