@@ -367,7 +367,7 @@ saturn.position.set(pos.x, posY, pos.z);
 
 // Saturn's rings
 const saturnRingTexture = textureLoader.load(
-  "./img/saturn/saturnringcolorflip.jpg"
+  "https://cdn.prod.website-files.com/67374fea14bfa252915cbf90/676e90f823bef4db1ed22bc2_saturnringcolorflip.jpg"
 );
 const saturnRingUniform = {
   planetTexture: { value: saturnRingTexture },
@@ -541,7 +541,7 @@ uranus.position.set(pos.x, posY, pos.z);
 
 // Uranus' rings
 const uranusRingTexture = textureLoader.load(
-  "/img/uranus/uranusringcolourflip.jpg"
+  "https://cdn.prod.website-files.com/67374fea14bfa252915cbf90/676e910ff722ade11338d982_uranusringcolourflip.jpg"
 );
 const uranusRingUniform = {
   planetTexture: { value: uranusRingTexture },
